@@ -26,6 +26,8 @@ public class Product {
 		// TODO Auto-generated constructor stub
 
 	}
+	
+	
 	public String productNameGetter() {
 		
 		return title;
@@ -36,14 +38,14 @@ public class Product {
 		return price;
 	}
 	
-	public double profitGetter(){
+	public int profitGetter(){
 		double salesPrice = price + ((rate/(5.0)*100)*numberOfViews);
 		double profit = salesPrice - price;
 		return (int)profit;
 		
 	}
 	
-	public double salesPriceGetter() {
+	public int salesPriceGetter() {
 		double salesPrice = price + ((rate/(5.0)*100)*numberOfViews);
 		return (int)salesPrice;
 		

@@ -77,9 +77,7 @@ public class SalesQuery {
 	
 	public  int totalProfitCalculator() {
 		
-		file.start_5();
-		file.start_4();
-		file.start_3();
+		file.prepareFiles();
 		int totalProfit = 0;
 			for(int products = 0 ;products < file.productsArrayGetterMethod().length; ++products) {
 				for (int sales = 0; sales < file.salesArray().length; ++sales) {
@@ -104,8 +102,7 @@ public class SalesQuery {
 	
 	public  String mostFrequent(Sales[] arr, int n)
 	  {
-		file.start_2();
-		file.start_3();
+		file.prepareFiles();
 	    int maxcount = 0;
 	    String element_having_max_freq="";
 	    for (int i = 0; i < n; i++) {
@@ -126,7 +123,7 @@ public class SalesQuery {
 	  }
 	
 	public Customer mostFrequentCustomer() {
-		file.start_2();
+		file.prepareFiles();
 		Customer result = file.customerArray()[0];
 		for(int i = 0; i < file.customerArray().length; ++i) {
 			if (file.customerArray()[i].customerIdGetter().equals( mostFrequent(file.salesArray(),20))){
